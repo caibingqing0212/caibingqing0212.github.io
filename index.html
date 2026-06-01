@@ -1,18 +1,37 @@
-<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
-<script>
-  new CozeWebSDK.WebChatClient({
-    config: {
-      bot_id: '7643324211087343657',
-    },
-    componentProps: {
-      title: 'Coze',
-    },
-    auth: {
-      type: 'token',
-      token: 'pat_dwn08dUJQov2uJCcciP4FbdFH683NjTx4a2dZh9ALYuSWbo0GvAcKXUADM06Lq1L',
-      onRefreshToken: function () {
-        return 'pat_dwn08dUJQov2uJCcciP4FbdFH683NjTx4a2dZh9ALYuSWbo0GvAcKXUADM06Lq1L'
-      }
-    }
-  });
-</script>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的AI智能体</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- Coze Chat SDK 会自动在右下角创建聊天窗口 -->
+    <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
+    <script>
+        new CozeWebSDK.WebChatClient({
+            config: {
+                bot_id: '7643324211087343657',   // 你的智能体ID，确认无误
+            },
+            componentProps: {
+                title: '我的智能助手',            // 可以自定义标题
+            },
+            auth: {
+                type: 'token',
+                token: 'pat_你的全新令牌',        // ⚠️ 这里替换成你新生成的完整令牌
+                onRefreshToken: function () {
+                    return 'pat_你的全新令牌';    // ⚠️ 同样替换
+                }
+            }
+        });
+    </script>
+</body>
+</html>
